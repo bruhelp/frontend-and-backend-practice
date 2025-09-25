@@ -1,47 +1,58 @@
 <!DOCTYPE html>
-<html lamg = "ru">
+<html lang="ru">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Семестровая работа</title>
+        <link rel="stylesheet" href="style/styles.css">
     </head>
     <body>
-        <div id="header">Хэдер</div>
-        <div id="menu">
-            <ul>
-                <li><a href="index.html">Главная</a></li>
-                <li><a href="pages/news.html">Новости</a></li>
-                <li><a href="pages/practices.html">Практики</a></li> 
-                <li><a href="pages/arts.html">Рисуночки</a></li>
-                <li><a href="pages/contacts.html">Контакты</a></li>
-            </ul>
-        </div>
-        <div id="content">
-            <p>Информация об авторе</p>
-            <img src="images/me.jpg" alt="Фото автора" width="200" height="250">
-            <p>Нестеренко Карина Александровна</p>
-            <p>ЭФБО-04-24</p>
-            <p>Обо мне: Я родилась в нулевых в неизвестном никому городе Волжский. Родители мои добрые люди, и я такая же.</p>
-            <div>Умею ходить</div>
-            <div>Умею прыгать</div>
-            <div>Умею дышать</div>
-            <div>Умею есть</div>
-            <div>
-                Мой опыт работы:
-                <div>
-                    Опыт 1<br>
-                    Работала игроманом. Играла в инди-игры, НЕ В ДОТУ.
+        <div class="page-container">
+            <div class="header">Хэдер</div>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pages/news.html">Новости</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pages/practices.html">Мои достижения</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pages/arts.html">Рисуночки</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pages/contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="content">
+                <div class="profile-header">
+                    <h1 class="profile-title">Информация об авторе</h1>
+                    <img class="profile-photo" src="images/me.jpg" alt="Фото автора" width="200" height="250">
+                    <h2 class="profile-name">Нестеренко Карина Александровна</h2>
+                    <p class="profile-group">ЭФБО-04-24</p>
                 </div>
-                <div>
-                    Опыт 2<br>
-                    Работала настольщиком. Проводила настолки и терроризировала друзей.
+                <div class="about-me">
+                    <p>Обо мне: Я родилась в нулевых в неизвестном никому городе Волжский. Родители мои добрые люди, и я такая же.</p>
                 </div>
-                <div>
-                    Опыт 3<br>
-                    Работала студентом. Не понравилось.
+
+                <div class="skills-container">
+                    <div class="skill-tag">Умею ходить</div>
+                    <div class="skill-tag">Умею прыгать</div>
+                    <div class="skill-tag">Умею дышать</div>
+                    <div class="skill-tag">Умею есть</div>
+                </div>
+                
+                <div class="experience-section">
+                    <h2 class="section-title">Мой опыт работы</h2>
+                    <div class="experience-card">
+                        <h3 class="experience-title">Опыт 1</h3>
+                        <p class="experience-desc">Работала игроманом. Играла в инди-игры, НЕ В ДОТУ.</p>
+                    </div>
+                    <div class="experience-card">
+                        <h3 class="experience-title">Опыт 2</h3>
+                        <p class="experience-desc">Работала настольщиком. Проводила настолки и терроризировала друзей.</p>
+                    </div>
+                    <div class="experience-card">
+                        <h3 class="experience-title">Опыт 3</h3>
+                        <p class="experience-desc">Работала студентом. Не понравилось.</p>
+                    </div>
                 </div>
             </div>
+            <div class="footer">Пук-пук</div>
         </div>
-        <div id="footer">Пук-пук</div>    
     </body>
 </html>

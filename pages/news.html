@@ -1,41 +1,44 @@
 <!DOCTYPE html>
-<html lamg = "ru">
+<html lang="ru">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Семестровая работа</title>
+        <title>Новости</title>
+        <link rel="stylesheet" href="../style/styles.css">
     </head>
     <body>
-        <div id="header">Хэдер</div>
-        <div id="menu">
-            <ul>
-                <li><a href="../index.html">Главная</a></li>
-                <li><a href="news.html">Новости</a></li>
-                <li><a href="practices.html">Практики</a></li> 
-                <li><a href="arts.html">Рисуночки</a></li>
-                <li><a href="contacts.html">Контакты</a></li>
-            </ul>
-        </div>
-        <div id="content">
-            <p>Новости</p>
-            <div>
-                <h2>Новость 1</h2>
-                <p>25.09.2025 11:11 А.К. Нестеренко</p>
-                <p>Сегодня. Сегодня был хороший день</p>
-                <p></p>
-            </div>
-            <div>
-                <h2>Новость 2</h2>
-                <p>25.09.2025 11:12 А.К. Нестеренко</p>
-                <p>Завтра. Завтра тоже будет хороший день</p>
+        <div class="page-container">
+            <div class="header">Хэдер</div>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Главная</a></li>
+                    <li class="nav-item"><a class="nav-link" href="news.html">Новости</a></li>
+                    <li class="nav-item"><a class="nav-link" href="practices.html">Мои достижения</a></li>
+                    <li class="nav-item"><a class="nav-link" href="arts.html">Рисуночки</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="content">
+                <h1 class="section-title">Новости</h1>
+                <div class="news-container">
+                    <div class="news-card">
+                        <h2 class="news-title">Новость 1</h2>
+                        <p class="news-meta">25.09.2025 11:11 А.К. Нестеренко</p>
+                        <p class="news-text">Сегодня. Сегодня был хороший день</p>
+                    </div>
+                    <div class="news-card">
+                        <h2 class="news-title">Новость 2</h2>
+                        <p class="news-meta">25.09.2025 11:12 А.К. Нестеренко</p>
+                        <p class="news-text">Завтра. Завтра тоже будет хороший день</p>
+                    </div>
+                    <div class="news-card">
+                        <h2 class="news-title">Новость 3</h2>
+                        <p class="news-meta">25.09.2025 11:13 А.К. Нестеренко</p>
+                        <p class="news-text">Улыбнитесь!😘</p>
+                    </div>
                 </div>
-            <div>
-                <h2>Новость 3</h2>
-                <p>25.09.2025 11:13 А.К. Нестеренко</p>
-                <p>Улыбнитесь!😘</p>
-                <p></p>
             </div>
+            <div class="footer">Пук-пук</div>  
         </div>
-        <div id="footer">Пук-пук</div>  
     </body>
 </html>
