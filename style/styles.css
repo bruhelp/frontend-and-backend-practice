@@ -178,6 +178,128 @@ body {
     margin: 0; /* Убираем отступы */
 }
 
+/* ===== НОВОСТИ ===== */
+.news-container {
+    display: grid;
+    gap: 25px;
+}
+
+.news-card {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); /* Светлый градиентный фон */
+    padding: 25px; /* Внутренние отступы */
+    border-radius: 15px; /* Скругленные углы */
+    margin: 30px 0; /* Вертикальные отступы */
+    border-left: 5px solid #225d2d; /* Синяя полоса слева */
+    font-size: 16px; /* Размер шрифта текста */
+    line-height: 1.8; /* Межстрочный интервал */
+}
+
+.news-title {
+    font-size: 24px;
+    color: #2c5034;
+    margin: 0 0 10px 0;
+    font-weight: 600;
+}
+
+.news-meta {
+    color: #757c73;
+    font-size: 14px;
+    margin: 0 0 15px 0;
+}
+
+.news-text {
+    color: #404040;
+    line-height: 1.7;
+    margin: 0;
+}
+
+
+/* ===== Мои достижения ===== */
+.practices-container{
+    display: flex; /* Горизонтальное расположение навыков */
+    justify-content: center; /* Выравнивание по центру */
+}
+
+.practices-link{
+    background: linear-gradient(135deg, #b8eab4 0%, #4a5e46 100%); /* Голубой градиентный фон */
+    color: white; /* Белый цвет текста */
+    padding: 12px 25px; /* Внутренние отступы */
+    border-radius: 25px; /* Круглые углы (капсульная форма) */
+    font-weight: 600; /* Жирный шрифт */
+    font-size: 14px; /* Размер шрифта */
+    box-shadow: 0 4px 15px rgba(174, 224, 168, 0.3); /* Тень с голубым оттенком */
+    transition: all 0.3s ease; /* Плавные анимации при изменении */
+}
+
+.practices-link:hover {
+    transform: translateY(-3px); /* Поднятие элемента при наведении */
+    box-shadow: 0 6px 20px rgba(108, 146, 179, 0.4); /* Увеличение тени при наведении */
+}
+
+/* ===== Рисуночки ===== */
+.practices-card{
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); /* Светлый градиентный фон */
+    border: 3px solid #174819;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin: 20px;
+}
+
+.practices-card img {
+    max-width: 100%;
+    max-height: 200px;
+    border-radius: 8px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 10px auto;
+}
+
+.product-card{
+    border: 3px solid #71c11c;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    display: inline-block; 
+    vertical-align: top; 
+    margin: 10px;
+}
+
+/* ===== Контакты ===== */
+.contact-info{
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); /* Светлый градиентный фон */
+    padding: 25px; /* Внутренние отступы */
+    border-radius: 15px; /* Скругленные углы */
+    margin: 30px 0; /* Вертикальные отступы */
+    border-left: 5px solid #225d2d; /* Синяя полоса слева */
+    font-size: 16px; /* Размер шрифта текста */
+    line-height: 1.8; /* Межстрочный интервал */
+}
+
+.contact-container{
+    display: flex; /* Горизонтальное расположение навыков */
+    justify-content: center; /* Выравнивание по центру */
+}
+
+.contact-button{
+    background: linear-gradient(135deg, #b8eab4 0%, #4a5e46 100%); /* Голубой градиентный фон */
+    color: white; /* Белый цвет текста */
+    padding: 12px 25px; /* Внутренние отступы */
+    border-radius: 25px; /* Круглые углы (капсульная форма) */
+    font-weight: 600; /* Жирный шрифт */
+    font-size: 14px; /* Размер шрифта */
+    box-shadow: 0 4px 15px rgba(174, 224, 168, 0.3); /* Тень с голубым оттенком */
+    transition: all 0.3s ease; /* Плавные анимации при изменении */
+}
+
+.contact-button:hover{
+    transform: translateY(-3px); /* Поднятие элемента при наведении */
+    box-shadow: 0 6px 20px rgba(108, 146, 179, 0.4); /* Увеличение тени при наведении */
+}
+
 /* ===== ФУТЕР ===== */
 .footer {
     background: linear-gradient(135deg, #103e24 0%, #103e15 100%); /* Темный градиентный фон */
@@ -185,37 +307,4 @@ body {
     text-align: center; /* Выравнивание по центру */
     padding: 30px; /* Внутренние отступы */
     margin-top: 50px; /* Отступ сверху */
-}
-
-.product-card{
-    border: 1px solid #174819;
-    border-radius: 10px;
-    padding: 15px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-    display: inline-block; 
-    vertical-align: top; 
-    margin: 10px;
-}
-
-.practices-card{
-    border: 1px solid #174819;
-    border-radius: 10px;
-    padding: 15px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-    display: inline-block; 
-    vertical-align: top; 
-    margin: 10px;
-}
-
-.practices-card img {
-    max-width: 100%;
-    max-height: 180px;
-    border-radius: 8px;
-    object-fit: cover;
-    display: block;
-    margin: 0 auto 10px auto;
 }
