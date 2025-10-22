@@ -9,45 +9,80 @@
 </head>
 
 <body>
-    <div class="page-container">
+    <!-- Основной контейнер -->
+    <div class="page">
+
+        <!-- Шапка -->
         <header class="header">
-            <h1>Новости</h1>
+            <h1 class="header__title">Новости</h1>
+            <button id="theme-toggle"">
+                <i class = " about__text">Смена темы</i>
+            </button>
         </header>
 
+        <!-- Навигация -->
         <nav class="nav">
-            <ul class="nav-list">
-                <li class="nav-item"><a class="nav-link" href="../index.html">Главная</a></li>
-                <li class="nav-item"><a class="nav-link" href="news.html">Новости</a></li>
-                <li class="nav-item"><a class="nav-link" href="practices.html">Мои достижения</a></li>
-                <li class="nav-item"><a class="nav-link" href="arts.html">Рисуночки</a></li>
-                <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <a class="nav__link" href="../index.html">Главная</a>
+                </li>
+                <li class="nav__item nav__item--active">
+                    <a class="nav__link" href="news.html">Новости</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="contacts.html">Контакты</a>
+                </li>
             </ul>
         </nav>
 
-        <main class="content">
-            <h1 class="section-title">Новостная лягушачья лента</h1>
-            <div class="news-container">
-                <div class="news-card">
-                    <h2 class="news-title">Ква 1</h2>
-                    <p class="news-meta">25.09.2025 11:11 А.К. Нестеренко Ква-квак</p>
-                    <p class="news-text">Сегодня в болоте была обнаружена цапля, всем немедленно прятаться!</p>
+        <!-- Основной контент -->
+        <main class="main">
+            <section class="news">
+                <h1 class="news__title">Новостная лягушачья лента</h1>
+                <div class="news__list">
+                    <div class="news-item">
+                        <h2 class="news-item__title">Ква 1</h2>
+                        <p class="news-item__date">25.09.2025 11:11 А.К. Нестеренко Ква-квак</p>
+                        <p class="news-item__text">Сегодня в болоте была обнаружена цапля, всем немедленно прятаться!
+                        </p>
+                    </div>
+                    <div class="news-item">
+                        <h2 class="news-item__title">Ква 2</h2>
+                        <p class="news-item__date">25.09.2025 11:15 А.К. Нестеренко Квак-вак</p>
+                        <p class="news-item__text">Оказалось, что очевидцы увидели не цаплю, а корявое дерево.</p>
+                    </div>
+                    <div class="news-item">
+                        <h2 class="news-item__title">Ква 3</h2>
+                        <p class="news-item__date">25.09.2025 11:20 А.К. Нестеренко Кваки-ква</p>
+                        <p class="news-item__text">Кувшинки сегодня отпад. Улыбнитесь!😘</p>
+                    </div>
                 </div>
-                <div class="news-card">
-                    <h2 class="news-title">Ква 2</h2>
-                    <p class="news-meta">25.09.2025 11:15 А.К. Нестеренко Квак-вак</p>
-                    <p class="news-text">Оказалось, что очевидцы увидели не цаплю, а корявое дерево.</p>
-                </div>
-                <div class="news-card">
-                    <h2 class="news-title">Ква 3</h2>
-                    <p class="news-meta">25.09.2025 11:20 А.К. Нестеренко Кваки-ква</p>
-                    <p class="news-text">Кувшинки сегодня отпад. Улыбнитесь!😘</p>
-                </div>
-            </div>
-        </main>
-        
-        <footer class="footer">
-            <p>Пук-пук</p>
-        </footer>
+            </section>
+
+            <script>
+                const themeToggle = document.getElementById('theme-toggle');
+                const root = document.documentElement;
+
+                // Проверяем тему при загрузке
+                if (localStorage.getItem('theme') === 'dark') {
+                    root.setAttribute('data-theme', 'dark');
+                }
+
+                // Переключаем тему по клику
+                themeToggle.onclick = () => {
+                    if (root.getAttribute('data-theme') === 'dark') {
+                        root.removeAttribute('data-theme');
+                        localStorage.setItem('theme', 'light');
+                    } else {
+                        root.setAttribute('data-theme', 'dark');
+                        localStorage.setItem('theme', 'dark');
+                    }
+                };
+            </script>
+
+            <footer class="footer">
+                <p class="footer__text">&copy; 2025 Мой сайт</p>
+            </footer>
     </div>
 </body>
 
