@@ -4,56 +4,191 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Рисуночки</title>
-    <link rel="stylesheet" href="../style/styles.css">
+    <title>Прайслист - Рисунки</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 </head>
 
-<body>
-    <div class="page-container">
-        <header class="header">
-            <h1>Рисуночки</h1>
-        </header>
+<body class="bg-light"> <!-- Цвет фона -->
+    <div class="container-fluid p-0"> <!-- Создание контейнера полной ширини 100% -->
+        <!-- Хэдер -->
+        <header class="bg-success text-white py-4"> <!-- Цвет шапки, цвет текста в шапке, отступы -->
 
-        <nav class="nav">
-            <ul class="nav-list">
-                <li class="nav-item"><a class="nav-link" href="../index.html">Главная</a></li>
-                <li class="nav-item"><a class="nav-link" href="news.html">Новости</a></li>
-                <li class="nav-item"><a class="nav-link" href="practices.html">Мои достижения</a></li>
-                <li class="nav-item"><a class="nav-link" href="arts.html">Рисуночки</a></li>
-                <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
-            </ul>
-        </nav>
-
-        <main class="content">
-            <h2 class="section-title">Рисуночки</h2>
-            <div class="products-grid">
-                <div class="product-card">
-                    <img class="product-image" src="../images/art1.jpg" alt="Скетчевый рисунок">
-                    <h3 class="product-name">Рисунок 1</h3>
-                    <p class="product-price">Стоимость скетча: 300 рублей</p>
-                </div>
-                <div class="product-card">
-                    <img class="product-image" src="../images/art2.jpg" alt="Черно-белый рисунок">
-                    <h3 class="product-name">Рисунок 2</h3>
-                    <p class="product-price">Стоимость чёрно-белого рисунка: 500 рублей</p>
-                </div>
-                <div class="product-card">
-                    <img class="product-image" src="../images/art3.jpg" alt="Скетчевый рисунок в цифре">
-                    <h3 class="product-name">Рисунок 3</h3>
-                    <p class="product-price">Стоимость скетчевого рисунка в цифре: 600 рублей</p>
-                </div>
-                <div class="product-card">
-                    <img class="product-image" src="../images/art4.jpg" alt="Полноценный рисунок">
-                    <h3 class="product-name">Рисунок 4</h3>
-                    <p class="product-price">Стоимость полноценного рисунка: 1000 рублей</p>
+            <div class="container">
+                <div class="row align-items-center"> <!-- Горизонтальное выравнивание по центру -->
+                    <div class="col"> <!-- Колонка, для которой действует выравнивание сверху-->
+                        <h1 class="h3 mb-1">Прайслист</h1>
+                        <p class="mb-0 opacity-75">Студент, начинающий художник</p>
+                        <!-- Прозрачность текста на 75 -->
+                    </div>
+                    <div class="col-auto">
+                        <!-- auto - для создания колонок, изменяющих свою ширину по ширине содержимого -->
+                        <span class="badge bg-light text-success">ЭФБО-04-24</span> <!-- Значок группы -->
+                    </div>
                 </div>
             </div>
+        </header>
+
+        <!-- Навигация -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <!-- Позволяет управлять тем, как выглядит навигационная панель на разнфх размерах экрана, делая её адаптивной -->
+            <div class="container">
+                <button class="navbar-toggler" type="bytton" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <!-- Кнопка-переключатель для меню навигации. data-bs-toggle - атрибут. collapse - скрывает содержимое. data-bs-target - атрибут, отсылающий на toggle -->
+                    <span class="navbar-toggler-icon"></span> <!-- Иконка "бургер" -->
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav"> <!-- ul - неупорядоченный список. navbar-nav для навигационной высоты -->
+                        <li class="nav-item"> <!-- item - ссылка -->
+                            <a class="nav-link active" href="../index.html"> <!-- active - нынешний элемент-->
+                                <i class="bi bi-house me-1"></i>Главная
+                                <!-- Курсивом: bi - иконки me-1 - margin end (правый край) 1-->
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="news.html">
+                                <i class="bi bi-newspaper me-1"></i>Новости
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="practices.html">
+                                <i class="bi bi-code-slash me-1"></i>Практики
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">
+                                <i class="bi bi-cart me-1"></i>Прайслист
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacts.html">
+                                <i class="bi bi-telephone me-1"></i>Контакты
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Основной контент -->
+        <main class="container my-4">
+            <section class="mb-5">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <div class="card mb-3">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="../images/art1.jpg" class="card-img-top" alt="Скетчевая работа"
+                                        style="width: 100; object-fit: cover;">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h4 class="card-title text-warning" style="font-weight: bold;">
+                                            <i class="bi bi-pencil text-warning"></i>
+                                            Скетчевая работа
+                                        </h4>
+                                        <p class="card-text">Набросок вашего персонажа, пейзажа или других
+                                            объектов, нарисованных на листе бумаги любыми цветными
+                                            украшениями по вашему
+                                            выбору.</p>
+                                        <p class="card-text"><small class="text-body-secondary">Цена: 200 рублей</small>
+                                        </p>
+                                        <a href="contacts.html" class="btn btn-outline-warning btn-sm">Написать мне с
+                                            заказом</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card mb-3">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="../images/art2.jpg" class="card-img-top" alt="Чёрно-белая работа"
+                                        style="width: 100; object-fit: cover;">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h4 class="card-title text-dark" style="font-weight: bold;">
+                                            <i class="bi bi-vector-pen text-dark"></i>
+                                            Чёрно-белая работа
+                                        </h4>
+                                        <p class="card-text">Изображение вашего персонажа, пейзажа или других
+                                            объектов, нарисованных на листе бумаги в чёрно-белой стилистике.</p>
+                                        <p class="card-text"><small class="text-body-secondary">Цена: 300 рублей</small>
+                                        </p>
+                                        <a href="contacts.html" class="btn btn-outline-dark btn-sm">Написать мне с
+                                            заказом</a>
+                                    </div>
+                                </div </div>
+                            </div>
+                            <div class="card mb-3">
+                                <div class="row g-0">
+                                    <div class="col-md-4">
+                                        <img src="../images/art3.jpg" class="card-img-top" alt="Цифровая скетчевая работа"
+                                            style="width: 100; object-fit: cover;">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card-body">
+                                            <h4 class="card-title text-info" style="font-weight: bold;">
+                                                <i class="bi bi-brush text-info"></i>
+                                                Цифровая скетчевая работа
+                                            </h4>
+                                            <p class="card-text">Набросок вашего персонажа, пейзажа или других
+                                                объектов, нарисованных с помощью графического планшета в формате jpg или png.</p>
+                                            <p class="card-text"><small class="text-body-secondary">Цена: 500
+                                                    рублей</small>
+                                            </p>
+                                            <a href="contacts.html" class="btn btn-outline-info btn-sm">Написать мне
+                                                с
+                                                заказом</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card mb-3">
+                                <div class="row g-0">
+                                    <div class="col-md-4">
+                                        <img src="../images/art4.jpg" class="card-img-top" alt="Полноценная работа"
+                                            style="width: 500; object-fit: cover;">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card-body">
+                                            <h4 class="card-title text-primary" style="font-weight: bold;">
+                                                <i class="bi bi-easel text-primary"></i>
+                                                Полноценная работа
+                                            </h4>
+                                            <p class="card-text">Изображение вашего персонажа, пейзажа или других
+                                                объектов, нарисованных с помощью графического планшета в формате jpg или png.</p>
+                                            <p class="card-text"><small class="text-body-secondary">Цена: 1000
+                                                    рублей</small>
+                                            </p>
+                                            <a href="contacts.html" class="btn btn-outline-primary btn-sm">Написать мне
+                                                с
+                                                заказом</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </section>
         </main>
-        
-        <footer class="footer">
-            <p>Пук-пук</p>
+
+        <!-- Футер -->
+        <footer class="bg-dark text-white py-4 mt-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p class="mb-0">&copy; 2025 Портфолио студента. Все права защищены.</p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <a href="pages/contacts.html" class="text-white text-decoration-none me-3">Контакты</a>
+                        <a href="#" class="text-white text-decoration-none">Политика конфиденциальности</a>
+                    </div>
+                </div>
+            </div>
         </footer>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
